@@ -1,0 +1,170 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#app-main {
+  padding: 0;
+}
+
+@mixin flex-box($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: nowrap;
+  justify-content: $justify;
+  align-content: stretch;
+  align-items: $align;
+}
+
+@mixin centerBackground() {
+  background-position: center center;
+  background-size: cover;
+}
+
+#upload-file-form {
+  width: 400px;
+  @include flex-box(column, flex-start, flex-start);
+
+  & > * {
+    margin: 5px 0;
+  }
+
+  h4 {
+    color: white;
+    text-align: center;
+  }
+
+  [type="submit"] {
+
+  }
+}
+
+.img-thumbnail {
+  height: 240px;
+  @include centerBackground();
+  transition: none;
+  box-shadow: inset 0 0 0 5px rgb(255, 255, 255);
+  margin: 5px 5px 5px 0;
+  @include flex-box(column, center, center);
+  padding: 0;
+  background-color: #b7b7b7;
+
+  .circle-container {
+    background: rgba(0,0,0,0.8);
+    border-radius: 140px;
+    width: 110px;
+    height: 110px;
+    @include flex-box(column, center, center);
+  }
+
+  .btn {
+    @include flex-box(column, center, center);
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 0.9;
+    transition: opacity .2s;
+    font-size: 12px;
+    line-height: 24px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .upload-icon {
+    font-size: 30px;
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+  }
+}
+
+.movieList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+  transition: .8s cubic-bezier(0, 0, 0.2, 1);
+  animation: fadeIn .6s;
+}
+
+.movieList-item {
+  height: 380px;
+  width: 100%;
+  display: inline-block;
+  @include centerBackground();
+}
+
+.appCover {
+  background: rgba(0,0,0,0.85);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  animation: fadeIn .6s;
+
+  & > *:not(.closeMe) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .closeMe {
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+  }
+}
+
+.btn:active, .btn.active {
+  opacity: 0.8;
+  transition: .2s;
+}
+
+.movieListContainer-navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  color: white;
+  z-index: 1;
+  font-size: 30px;
+  @include flex-box(column, center, center);
+
+  &.goLeft {
+    left: 0px;
+  }
+
+  &.goRight{
+    right: 0px;
+  }
+}
