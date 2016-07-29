@@ -148,7 +148,7 @@
   .movieListContainer-navBtn.goLeft {
     left: 0px; }
     .movieListContainer-navBtn.goLeft:before {
-      transform: translateX(3px) translateY(2px); }
+      transform: translateX(-3px) translateY(2px); }
   .movieListContainer-navBtn.goRight {
     right: 0px; }
     .movieListContainer-navBtn.goRight:before {

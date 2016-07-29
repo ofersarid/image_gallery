@@ -22,8 +22,8 @@ class MovieList extends Component {
     });
     return (
       <div style={{display: movieItems.length ? 'block' : 'none'}} className="movieListContainer">
-        <i className="fa fa-chevron-left goLeft movieListContainer-navBtn btn" onClick={()=>{this.setState({position: this.state.position + 100})}}/>
-        <i className="fa fa-chevron-right goRight movieListContainer-navBtn btn" onClick={()=>{this.setState({position: this.state.position - 100})}}/>
+        {this.state.position < 0 ? <i className="fa fa-chevron-left goLeft movieListContainer-navBtn btn" onClick={()=>{this.setState({position: this.state.position + 100})}}/> : null}
+        {this.state.position > -(this.props.movies.length -1) * 100 ? <i className="fa fa-chevron-right goRight movieListContainer-navBtn btn" onClick={()=>{this.setState({position: this.state.position - 100})}}/> : null}
         <ul className="movieList" style={{transform: 'translateX('+this.state.position+'%)'}}>
           {movieItems}
         </ul>
