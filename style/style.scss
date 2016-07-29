@@ -34,13 +34,17 @@
     margin: 5px 0;
   }
 
+  .form-control {
+    color: rgba(255,255,255,0.6);
+  }
+
   h4 {
     color: white;
     text-align: center;
   }
 
-  [type="submit"] {
-
+  .submit {
+    width: 100%;
   }
 }
 
@@ -155,16 +159,34 @@
   height: 60px;
   width: 60px;
   border-radius: 50px;
-  color: white;
+  color: white !important;
   z-index: 1;
   font-size: 30px;
   @include flex-box(column, center, center);
 
   &.goLeft {
     left: 0px;
+    &:before {
+      transform: translateX(-3px) translateY(2px);
+    }
   }
 
   &.goRight{
     right: 0px;
+    &:before {
+      transform: translateX(3px) translateY(2px);
+    }
   }
+}
+
+.btn:focus,.btn:active {
+  outline: none !important;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.navbar {
+  margin-bottom: 1px;
 }

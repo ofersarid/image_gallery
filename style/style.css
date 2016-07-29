@@ -20,9 +20,13 @@
   align-items: flex-start; }
   #upload-file-form > * {
     margin: 5px 0; }
+  #upload-file-form .form-control {
+    color: rgba(255, 255, 255, 0.6); }
   #upload-file-form h4 {
     color: white;
     text-align: center; }
+  #upload-file-form .submit {
+    width: 100%; }
 
 .img-thumbnail {
   height: 240px;
@@ -132,7 +136,7 @@
   height: 60px;
   width: 60px;
   border-radius: 50px;
-  color: white;
+  color: white !important;
   z-index: 1;
   font-size: 30px;
   display: flex;
@@ -143,7 +147,20 @@
   align-items: center; }
   .movieListContainer-navBtn.goLeft {
     left: 0px; }
+    .movieListContainer-navBtn.goLeft:before {
+      transform: translateX(3px) translateY(2px); }
   .movieListContainer-navBtn.goRight {
     right: 0px; }
+    .movieListContainer-navBtn.goRight:before {
+      transform: translateX(3px) translateY(2px); }
+
+.btn:focus, .btn:active {
+  outline: none !important; }
+
+.form-control:focus {
+  box-shadow: none; }
+
+.navbar {
+  margin-bottom: 1px; }
 
 /*# sourceMappingURL=style.css.map */

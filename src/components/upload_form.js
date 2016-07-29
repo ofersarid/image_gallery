@@ -16,7 +16,7 @@ class UploadForm extends Component {
 
   render() {
     var disabled = this.state.title.length === 0 || this.state.link.length === 0 || this.state.description.length === 0 || this.state.image_url.length === 0;
-    var classes = classNames('btn', 'btn-primary', 'form-control', {'disabled': disabled});
+    var classes = classNames('btn', 'btn-primary', 'btn-raised', 'submit', {'disabled': disabled});
 
     return (
       <div className="appCover" style={{height: window.innerHeight}}>
