@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import UploadForm from './components/upload_form';
-import MovieList from './components/movie_list';
-import NavBar from './components/nav_bar';
+import UploadForm from './components/uploader/upload_form';
+import MovieList from './components/movie_list/movie_list';
+import NavBar from './components/nav_bar/nav_bar';
 
 // Create a new component. This component should produce some HTML.
 
@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      movies: [],
+      movies: JSON.parse(localStorage.getItem("movies")) || [],
       selectedMovie: null,
       showForm: false
     };
@@ -34,7 +34,9 @@ class App extends Component {
     // update state by adding new movie
     this.setState({
       movies: this.state.movies.concat([movie])
-    })
+    }, () => {
+      localStorage.setItem("movies", JSON.stringify(this.state.movies));
+    });
   }
 
   closeForm() {

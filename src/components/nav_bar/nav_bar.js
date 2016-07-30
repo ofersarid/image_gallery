@@ -21,7 +21,6 @@ const NavBar = ({openForm}) => {
         </div>
         <div className="navbar-collapse collapse navbar-responsive-collapse">
           <ul className="nav navbar-nav">
-            {/*<li className="active"><a href="javascript:void(0)">Active</a></li>*/}
             <li><a href="javascript:void(0)" onClick={openForm}>Add Movie</a></li>
           </ul>
         </div>

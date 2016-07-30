@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ImageLoader from './image_loader';
+import ImageLoader from '../image_loader/image_loader';
 import classNames from 'classnames';
 
 class UploadForm extends Component {

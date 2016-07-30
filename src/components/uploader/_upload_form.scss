@@ -1,0 +1,45 @@
+#upload-file-form {
+  width: 400px;
+  @include flex-box(column, flex-start, flex-start);
+
+  & > * {
+    margin: 5px 0;
+  }
+
+  .form-control {
+    color: rgba(255,255,255,0.6);
+  }
+
+  h4 {
+    color: white;
+    text-align: center;
+  }
+
+  .submit {
+    width: 100%;
+  }
+}
+
+.appCover {
+  background: rgba(0,0,0,0.85);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  animation: fadeIn .6s;
+
+  & > *:not(.closeMe) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .closeMe {
+    color: white;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 30px;
+  }
+}
