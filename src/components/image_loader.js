@@ -30,16 +30,6 @@ class ImageLoader extends Component {
   renderImage(file) {
     let self = this;
     self.props.onImageChange(file);
-    // let promise = new Promise((resolve)=>{
-    //   self.props.onImageChange(file, resolve);
-    // });
-    // promise.then((image_url) => {
-    //   self.setState({
-    //     thumbUrl: {
-    //       backgroundImage: 'url(' + image_url + ')'
-    //     }
-    //   });
-    // });
   }
 }
 
