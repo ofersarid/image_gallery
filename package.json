@@ -29,6 +29,8 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "bootstrap": "^3.3.7",
+    "bootstrap-material-design": "^0.5.10",
     "classnames": "^2.2.5",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
@@ -36,7 +38,6 @@
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.1",
-    "redux": "^3.0.4",
-    "youtube-api-search": "0.0.5"
+    "redux": "^3.0.4"
   }
 }
