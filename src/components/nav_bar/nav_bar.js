@@ -17,7 +17,7 @@ const NavBar = ({openForm}) => {
             <span className="icon-bar"/>
             <span className="icon-bar"/>
           </button>
-          <a className="navbar-brand" href="javascript:void(0)">Reacongate</a>
+          <a className="navbar-brand" href="javascript:void(0)">Recongate</a>
         </div>
         <div className="navbar-collapse collapse navbar-responsive-collapse">
           <ul className="nav navbar-nav">
